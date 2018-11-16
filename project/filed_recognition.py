@@ -5,9 +5,7 @@ import matplotlib.pyplot as plt
 
 from skimage import data, io, filters, exposure, measure, segmentation
 from skimage.filters import rank
-from skimage import img_as_float, img_as_ubyte
 from skimage.morphology import disk
-import skimage.morphology as mp
 from skimage import util
 from skimage.color import rgb2hsv, hsv2rgb, rgb2gray, gray2rgb
 from skimage.filters.edges import convolve
@@ -38,5 +36,5 @@ ax.set_xticks([])
 ax.set_yticks([])
 plt.show()
 
-#io.imshow(img)
-#plt.show()
+io.imshow(img)
+plt.show()
