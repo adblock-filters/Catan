@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3f47f8d-c6f1-4944-9e48-d4baae0097fb" name="Default" comment="W skrypcie &quot;BoardDetection[...]&quot; znajduje się funkcja &quot;czarna pizza&quot; ktora w miarę dokładnie transformuje naszą planszę do bialo-czarnej mapy (zależy od parametrów low/upp bound wykrywania niebieskiego koloru) //do dokalibrowania&#10;znalazłem też funkcję która taki czarno-biały obiekcik obrysowuję i zwraca (chyba) kontur dokladny lub przyblizony (kwardrat!) wiec dalej bawie sie w obsluge tego">
+      <change afterPath="$PROJECT_DIR$/project/resources/tutek.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/BoardDetectionAndRotation.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/BoardDetectionAndRotation.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -12,7 +14,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Catan$mayavi2_spring.coverage" NAME="mayavi2_spring Coverage Results" MODIFIED="1542376684120" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/share/doc/networkx-2.2/examples/3d_drawing" />
-    <SUITE FILE_PATH="coverage/Catan$BoardDetectionAndRotation.coverage" NAME="BoardDetectionAndRotation Coverage Results" MODIFIED="1542461114500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project" />
+    <SUITE FILE_PATH="coverage/Catan$BoardDetectionAndRotation.coverage" NAME="BoardDetectionAndRotation Coverage Results" MODIFIED="1542466599761" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project" />
     <SUITE FILE_PATH="coverage/Catan$field_recognition.coverage" NAME="field_recognition Coverage Results" MODIFIED="1542375837685" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Catan$filed_recognition__1_.coverage" NAME="filed_recognition (1) Coverage Results" MODIFIED="1542452840090" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project" />
     <SUITE FILE_PATH="coverage/Catan$filed_recognition.coverage" NAME="filed_recognition Coverage Results" MODIFIED="1542375854218" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -32,6 +34,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="cfg" value="2" />
+          <entry key="ipynb" value="1" />
           <entry key="jpg" value="1" />
           <entry key="json" value="2" />
           <entry key="py" value="10" />
@@ -40,6 +43,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="IPNB" value="1" />
           <entry key="Image" value="1" />
           <entry key="Ini" value="2" />
           <entry key="JSON" value="2" />
@@ -50,14 +54,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="47" />
-          <entry key="py" value="1352" />
+          <entry key="py" value="1835" />
           <entry key="txt" value="467" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="467" />
-          <entry key="Python" value="1399" />
+          <entry key="Python" value="1882" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -84,10 +88,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/project/BoardDetectionAndRotation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-163">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="357">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
               <folding>
-                <element signature="e#0#25#0" expanded="true" />
+                <element signature="e#0#14#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -116,6 +120,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="Jupyter Notebook" />
       </list>
     </option>
   </component>
@@ -136,6 +141,7 @@
         <option value="$PROJECT_DIR$/project/__init__.py" />
         <option value="$PROJECT_DIR$/project/opencv_samples.py" />
         <option value="$PROJECT_DIR$/project/filed_recognition.py" />
+        <option value="$PROJECT_DIR$/project/resources/tutek.ipynb" />
         <option value="$PROJECT_DIR$/project/BoardDetectionAndRotation.py" />
       </list>
     </option>
@@ -397,19 +403,25 @@
       <option name="project" value="LOCAL" />
       <updated>1542459205614</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="W skrypcie &quot;BoardDetection[...]&quot; znajduje się funkcja &quot;czarna pizza&quot; ktora w miarę dokładnie transformuje naszą planszę do bialo-czarnej mapy (zależy od parametrów low/upp bound wykrywania niebieskiego koloru) //do dokalibrowania&#10;znalazłem też funkcję która taki czarno-biały obiekcik obrysowuję i zwraca (chyba) kontur dokladny lub przyblizony (kwardrat!) wiec dalej bawie sie w obsluge tego">
+      <created>1542461774595</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1542461774595</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.03789731" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.058068458" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49938875" visible="true" weight="0.3930571" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49938875" visible="true" weight="0.20604703" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39977604" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -423,7 +435,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" anchor="right" id="SciView" order="3" visible="true" weight="0.36246943" />
+      <window_info active="true" anchor="right" id="SciView" order="3" visible="true" weight="0.47860634" />
       <window_info anchor="right" x="0" y="0" width="374" height="826" id="Documentation" order="4" side_tool="true" weight="0.28789732" />
       <window_info anchor="right" id="Database" order="5" />
     </layout>
@@ -518,12 +530,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/project/resources/tutek.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/project/BoardDetectionAndRotation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-163">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="357">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
           <folding>
-            <element signature="e#0#25#0" expanded="true" />
+            <element signature="e#0#14#0" expanded="true" />
           </folding>
         </state>
       </provider>
