@@ -25,11 +25,11 @@ for n, contour in enumerate(contours):
 
     # filtering
     if (
-        contours[n-1][0, 1] - contour[0 , 1] < 5
+        contours[n-1][0, 1] - contour[0, 1] < 3
         or
-        contours[n - 1][0, 0] - contour[0, 0] < 5
+        contours[n - 1][0, 0] - contour[0, 0] < 3
     ):
-        ax.plot(contour[:, 1], contour[:, 0], 'r', linewidth=2)
+        ax.plot(contour[:, 1], contour[:, 0], 'r', linewidth=1)
 
 
 ax.set_xticks([])
