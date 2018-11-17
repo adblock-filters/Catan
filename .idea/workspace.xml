@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b3f47f8d-c6f1-4944-9e48-d4baae0097fb" name="Default" comment="test pycharm commit">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="b3f47f8d-c6f1-4944-9e48-d4baae0097fb" name="Default" comment="W skrypcie &quot;BoardDetection[...]&quot; znajduje się funkcja &quot;czarna pizza&quot; ktora w miarę dokładnie transformuje naszą planszę do bialo-czarnej mapy (zależy od parametrów low/upp bound wykrywania niebieskiego koloru) //do dokalibrowania&#10;znalazłem też funkcję która taki czarno-biały obiekcik obrysowuję i zwraca (chyba) kontur dokladny lub przyblizony (kwardrat!) wiec dalej bawie sie w obsluge tego">
       <change beforePath="$PROJECT_DIR$/project/BoardDetectionAndRotation.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/BoardDetectionAndRotation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/filed_recognition.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/filed_recognition.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,7 +12,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Catan$mayavi2_spring.coverage" NAME="mayavi2_spring Coverage Results" MODIFIED="1542376684120" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/share/doc/networkx-2.2/examples/3d_drawing" />
-    <SUITE FILE_PATH="coverage/Catan$BoardDetectionAndRotation.coverage" NAME="BoardDetectionAndRotation Coverage Results" MODIFIED="1542458890303" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project" />
+    <SUITE FILE_PATH="coverage/Catan$BoardDetectionAndRotation.coverage" NAME="BoardDetectionAndRotation Coverage Results" MODIFIED="1542461114500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project" />
     <SUITE FILE_PATH="coverage/Catan$field_recognition.coverage" NAME="field_recognition Coverage Results" MODIFIED="1542375837685" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Catan$filed_recognition__1_.coverage" NAME="filed_recognition (1) Coverage Results" MODIFIED="1542452840090" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project" />
     <SUITE FILE_PATH="coverage/Catan$filed_recognition.coverage" NAME="filed_recognition Coverage Results" MODIFIED="1542375854218" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -52,12 +50,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="47" />
-          <entry key="py" value="821" />
+          <entry key="py" value="1352" />
+          <entry key="txt" value="467" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="868" />
+          <entry key="PLAIN_TEXT" value="467" />
+          <entry key="Python" value="1399" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -84,8 +84,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/project/BoardDetectionAndRotation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+            <state relative-caret-position="-163">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -147,7 +147,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="840" />
+    <option name="x" value="745" />
     <option name="width" value="840" />
     <option name="height" value="1010" />
   </component>
@@ -390,18 +390,26 @@
       <option name="project" value="LOCAL" />
       <updated>1542378032362</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="W skrypcie &quot;BoardDetection[...]&quot; znajduje się funkcja &quot;czarna pizza&quot; ktora w miarę dokładnie transformuje naszą planszę do bialo-czarnej mapy (zależy od parametrów low/upp bound wykrywania niebieskiego koloru) //do dokalibrowania&#10;znalazłem też funkcję która taki czarno-biały obiekcik obrysowuję i zwraca (chyba) kontur dokladny lub przyblizony (kwardrat!) wiec dalej bawie sie w obsluge tego">
+      <created>1542459205614</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1542459205614</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20110025" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.03789731" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49938875" visible="true" weight="0.1556551" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49938875" visible="true" weight="0.3930571" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39977604" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -415,7 +423,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" anchor="right" id="SciView" order="3" visible="true" weight="0.22860636" />
+      <window_info active="true" anchor="right" id="SciView" order="3" visible="true" weight="0.36246943" />
       <window_info anchor="right" x="0" y="0" width="374" height="826" id="Documentation" order="4" side_tool="true" weight="0.28789732" />
       <window_info anchor="right" id="Database" order="5" />
     </layout>
@@ -452,7 +460,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test pycharm commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="test pycharm commit" />
+    <MESSAGE value="W skrypcie &quot;BoardDetection[...]&quot; znajduje się funkcja &quot;czarna pizza&quot; ktora w miarę dokładnie transformuje naszą planszę do bialo-czarnej mapy (zależy od parametrów low/upp bound wykrywania niebieskiego koloru) //do dokalibrowania&#10;znalazłem też funkcję która taki czarno-biały obiekcik obrysowuję i zwraca (chyba) kontur dokladny lub przyblizony (kwardrat!) wiec dalej bawie sie w obsluge tego" />
+    <option name="LAST_COMMIT_MESSAGE" value="W skrypcie &quot;BoardDetection[...]&quot; znajduje się funkcja &quot;czarna pizza&quot; ktora w miarę dokładnie transformuje naszą planszę do bialo-czarnej mapy (zależy od parametrów low/upp bound wykrywania niebieskiego koloru) //do dokalibrowania&#10;znalazłem też funkcję która taki czarno-biały obiekcik obrysowuję i zwraca (chyba) kontur dokladny lub przyblizony (kwardrat!) wiec dalej bawie sie w obsluge tego" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/field_recognition.py" />
@@ -511,8 +520,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/project/BoardDetectionAndRotation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+        <state relative-caret-position="-163">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>

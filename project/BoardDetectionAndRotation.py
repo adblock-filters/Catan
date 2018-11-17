@@ -28,15 +28,25 @@ def czarnaPizza(img):
     output = cv2.bitwise_and(img, img, mask=mask)
 
     # output = rgb2gray(output)
-    thresh, dst = cv2.threshold(output, 0, 255, cv2.THRESH_BINARY_INV)
-    io.imshow(dst)
+    thresh, dst = cv2.threshold(output, 0, 255, cv2.THRESH_BINARY)  # JESLI CHCESZ ZMIENIC KOLORY
+                                                                    # THRESHOLDA (INVERTED)
+                                                                    # DOPISZ _INV DO OSTATNIEGO ARGUMENTU
+    dst=rgb2gray(dst)
+    print(type(dst))
+    # info=np.iinfo(dst.dtype)
+    # dst = dst.astype(np.float64) / info.max
+    # dst = 255*dst
+    dst=dst.astype(np.uint8)
+    print(dst.dtype)
+    im2, contours, hierarchy = cv2.findContours(dst, 1, 2)
+    cnt = contours[0]
+    area = cv2.contourArea(cnt)
+    print(area)
+
+    io.imshow(dst, cmap='gray')
     plt.show()
 
     return output
 
 
 wynik = czarnaPizza(img)
-
-
-
-
