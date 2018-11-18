@@ -37,3 +37,72 @@ for cnt in contours:
 cv2.imshow('img', img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
+
+# =====================================
+# sample programs
+
+contours_points = []
+for n, cont in enumerate(contours):
+    for i in cont:
+        contours_points.append(i)
+
+contours_points = np.asarray(contours_points)
+contours_points.sort()
+
+len_contours_points = len(contours_points)
+linear_contours_points = []
+for n, point in enumerate(contours_points):
+    if (n + 2 < len_contours_points):
+        point1 = contours_points[n + 1]
+        point2 = contours_points[n + 2]
+
+        if (point[0] == point1[0] == point2[0]):
+            linear_contours_points.append(point)
+        elif (point[0] == point1[0] or point[0] == point2[0]):
+            pass
+        else:
+            if (((point1[1] - point[1]) / (point1[0] - point[0]))
+                    -
+                    ((point2[1] - point[1]) / (point2[0] - point[0]))
+                    < 2
+            ):
+                linear_contours_points.append(point)
+
+print(len(linear_contours_points))
+
+# ---
+
+len_contours_points = len(contours)
+linear_contours = []
+for i in range(len_contours_points): linear_contours.append([])
+item = 0
+for n, cont1 in enumerate(contours):
+    if n + 1 < len_contours_points:
+        c1x1 = cont1[0][0]
+        c1y1 = cont1[0][1]
+        c1x2 = cont1[int(len(cont1) / 2)][0]
+        c1y2 = cont1[int(len(cont1) / 2)][1]
+
+        c2x1 = contours[n + 1][0][0]
+        c2y1 = contours[n + 1][0][1]
+        c2x2 = contours[n + 1][int(len(contours[n + 1]) / 2)][0]
+        c2y2 = contours[n + 1][int(len(contours[n + 1]) / 2)][1]
+
+        linear_contours[item].append(cont1)
+        if c1x2 == c1x1 or c2x2 == c1x1:
+            linear_contours[item].append(contours[n + 1])
+        else:
+            if (((c1y2 - c1y1) / (c1x2 - c1x1))
+                    -
+                    ((c2y2 - c1y1) / (c2x2 - c1x1))
+                    == 0
+            ):
+                linear_contours[item].append(contours[n + 1])
+            else:
+                item = n
+
+linear_contours_numbers = []
+for n, i in enumerate(linear_contours):
+    if (len(i) > 2): linear_contours_numbers.append(n)
+
+# ---
