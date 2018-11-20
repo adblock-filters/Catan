@@ -13,27 +13,7 @@ from skimage import util
 from skimage.color import rgb2hsv, hsv2rgb, rgb2gray, gray2rgb
 from skimage.filters.edges import convolve
 
-"""
-WYKRYWANIE POL
-0.1 uporzadkuj punkty w tablicy rosnaco, osobno dla kazdej z 4 tablic: S-N, W-E, SW-NE, NW-SE
-0.2 wylicz x - dlugosc boku na podstawie stosunku do dlugosci obrazka
-0.3 wylicz r na podstawie x - promien krotki 6kata
-1. wykrywanie linii
-1.1 dla kadego punktu sprawdx jego 2 nastepniki i jesli tworza linie, to dodaj ten punkt do tablicy
-1.2 idz tak dlugo az roznica miedzy polozeniem pierwszego a ostatniego wyniesie x 
-(wyliczany na podstawie stosunku dlugosci niebieskich bokow planszy)
-1.3 narysuj najdluzsza mozliwa linie 
-(1.4) lub narysuj linie przez cala plansze
-2. tworzenie linii
-2.1 ze zbioru punktow stworz linie kontutu o dlugosci x
-3. wykrywanie naprzeciwlegej rwnolegej linii
-3.1 jesli dla okreslonej przez y liczby punktow sa polozone rownolegle ok. y punkty, 
-to WYKRYTO
-4. rysowanie 6kata na podstawie 2 linii i ich odlegosci
-4.1 wylicz dokladna odleglosc miedzy liniami = L
-{?} 4.2 znajdz srodek tych linii (?)
-4.3 narysuj 6kat
-"""
+
 
 print("start___")
 
@@ -120,21 +100,6 @@ def contours_by_saturation(img, func=saturation_mask(img), find_param=0.05):
 
     return long_contours
 
-
-def draw_contours(img, func):
-    contours = func
-
-    fig, ax = plt.subplots()
-    ax.imshow(img, interpolation='nearest', cmap=plt.cm.gray)
-
-    for n, contour in enumerate(contours):
-        ax.plot(contour[:, 1], contour[:, 0], 'r', linewidth=2)
-
-    ax.set_xticks([])
-    ax.set_yticks([])
-    plt.show()
-
-
 def sobel_mask(img, mask=0.1, gamma=3, gauss=6):
     # params:
     gamma_param = gamma
@@ -159,30 +124,55 @@ def sobel_mask(img, mask=0.1, gamma=3, gauss=6):
     return img
 
 
-def contours_by_sobel(img_rgb, find_param=0.7, sobel=0.08, len=1000):
+def contours_by_sobel(img_rgb, find_param=0.7, sobel=0.08, lens=1000):
     # params:
     contour_find_param = find_param
-    contour_len = len
+    contour_len = lens
     sobel_param = sobel
     # find contours
     img = rgb2gray(sobel_mask(img_rgb, sobel_param))
     contours = measure.find_contours(img, contour_find_param)
+
+
     # select long contours
     long_contours = []
     for contour in contours:
-        if len(contour) > contour_len:
+        if (len(contour) > contour_len):
             long_contours.append(contour)
 
     return long_contours
 
 
+def draw_contours(img, func, func2 = False):
+    contours = func
+    contours2 = func2
 
-# draw_contours(img, contours_by_saturation(img))
-# draw_contours(img, contours_by_sobel(img))
-image = io.imread(os.path.join('resources/', 'fortemplate2.png'))
-field = io.imread(os.path.join('resources/', 'template.png'))
-image = rgb2gray(image)
-field = rgb2gray(field)
+    fig, ax, = plt.subplots()
+    ax.imshow(img, interpolation='nearest', cmap=plt.cm.gray)
+
+    for n, contour in enumerate(contours):
+        ax.plot(contour[:, 1], contour[:, 0], 'r', linewidth=2)
+
+    if (func2):
+        print("func2 exists")
+        for n, contour in enumerate(contours2):
+            ax.plot(contour[:, 1], contour[:, 0], 'b', linewidth=2)
+
+    ax.set_xticks([])
+    ax.set_yticks([])
+    plt.show()
+
+
+#draw_contours(img, contours_by_saturation(img, lightness_mask(img)))
+draw_contours(img, contours_by_saturation(img), contours_by_sobel(img))
+
+
+#draw_contours(img, contours_by_sobel(img))
+
+# image = io.imread(os.path.join('resources/', 'fortemplate2.png'))
+# field = io.imread(os.path.join('resources/', 'template.png'))
+# image = rgb2gray(image)
+# field = rgb2gray(field)
 
 
 
