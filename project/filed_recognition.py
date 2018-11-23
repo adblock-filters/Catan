@@ -5,9 +5,7 @@ import matplotlib.pyplot as plt
 
 from skimage import data, io, filters, exposure, measure, segmentation
 from skimage.filters import rank
-from skimage import img_as_float, img_as_ubyte
 from skimage.morphology import disk
-import skimage.morphology as mp
 from skimage import util
 from skimage.color import rgb2hsv, hsv2rgb, rgb2gray, gray2rgb
 from skimage.filters.edges import convolve
@@ -27,16 +25,16 @@ for n, contour in enumerate(contours):
 
     # filtering
     if (
-        contours[n-1][0, 1] - contour[0 , 1] < 5
+        contours[n-1][0, 1] - contour[0, 1] < 3
         or
-        contours[n - 1][0, 0] - contour[0, 0] < 5
+        contours[n - 1][0, 0] - contour[0, 0] < 3
     ):
-        ax.plot(contour[:, 1], contour[:, 0], 'r', linewidth=2)
+        ax.plot(contour[:, 1], contour[:, 0], 'r', linewidth=1)
 
 
 ax.set_xticks([])
 ax.set_yticks([])
 plt.show()
 
-#io.imshow(img)
-#plt.show()
+io.imshow(img)
+plt.show()
