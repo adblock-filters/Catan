@@ -105,4 +105,26 @@ linear_contours_numbers = []
 for n, i in enumerate(linear_contours):
     if (len(i) > 2): linear_contours_numbers.append(n)
 
-# ---
+# --- 3 LONGEST ARRAYS FROM ARRAY
+    len_cont = [0, 1, 2]
+    for i, item in enumerate(contours):
+        print(np.argmax(len_cont))
+        if len(item) > len(contours[np.argmax(len_cont)]):
+            del len_cont[np.argmin(len_cont)]
+            len_cont.append(i)
+
+    contours_new = []
+    for item in len_cont:
+        contours_new.append(contours[item])
+        print('==', item)
+
+
+# color_tab =  img[rr, cc, :].mean(axis=0)
+# color_tab += img[rr + 20, cc + 20, :].mean(axis=0)
+# color_tab += img[rr + 40, cc + 40, :].mean(axis=0)
+# color_tab += img[rr - 20, cc - 20, :].mean(axis=0)
+# color_tab += img[rr - 40, cc - 40, :].mean(axis=0)
+# color_tab += img[rr + 20, cc - 20, :].mean(axis=0)
+# color_tab += img[rr + 40, cc - 40, :].mean(axis=0)
+# color_tab += img[rr - 20, cc + 20, :].mean(axis=0)
+# color_tab += img[rr - 40, cc + 40, :].mean(axis=0)

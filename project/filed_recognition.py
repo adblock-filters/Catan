@@ -112,8 +112,8 @@ def sobel_mask(img, mask=0.1, gamma=3, gauss=6):
 
     mask_dark = img <= mask_param
     mask_light = img > mask_param
-    img[mask_dark] = 1;
-    img[mask_light] = 0;
+    img[mask_dark] = 1
+    img[mask_light] = 0
 
     img = filters.gaussian(img, gauss_param)
     img = exposure.adjust_gamma(img, gamma_param, 1)
