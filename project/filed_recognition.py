@@ -175,4 +175,3 @@ draw_contours(img, contours_by_saturation(img), contours_by_sobel(img))
 # field = rgb2gray(field)
 
 
-
